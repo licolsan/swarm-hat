@@ -1,0 +1,18 @@
+---
+- name: install packages
+  hosts: all
+  become: yes
+  tasks:
+    - import_tasks: ./task/package_installation.yml
+
+- name: init swarm cluster
+  hosts: swarm-manager
+  become: yes
+  tasks:
+    - import_tasks: ./task/swarm_initialization.yml
+
+- name: join cluster
+  hosts: swarm-workers
+  become: yes
+  tasks:
+    - import_tasks: ./task/swarm_participation.yml

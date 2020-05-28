@@ -1,18 +1,21 @@
 ---
-- name: install packages
+- name: Install packages
   hosts: all
   become: yes
   tasks:
+    - include_vars: variable.yml
     - import_tasks: ./task/package_installation.yml
 
-- name: init swarm cluster
+- name: Init swarm cluster
   hosts: swarm-manager
   become: yes
   tasks:
+    - include_vars: variable.yml
     - import_tasks: ./task/swarm_initialization.yml
 
-- name: join cluster
+- name: Join cluster
   hosts: swarm-workers
   become: yes
   tasks:
+    - include_vars: variable.yml
     - import_tasks: ./task/swarm_participation.yml

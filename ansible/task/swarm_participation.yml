@@ -2,7 +2,7 @@
 - name: Participate to swarm cluster
   docker_swarm:
     state: join
-    advertise_addr: 192.168.3.10
-    join_token: SWMTKN-1-4svxf5pfzye7t7uh3k81k1v556zv3v7z7q7z2tdeek5ovcgf65-1dkcp31pt00sx4fxh0q1ocgix
-    remote_addrs: ['192.168.3.10:2377']
+    advertise_addr: "{{ manager_ip }}"
+    join_token: SWMTKN-1-4qyfv6zm0lc1uu5dald5bjoggo9bg3a0f36cj9douwmmg3sftg-5razfma8vabgj2qzc46vuirzl
+    remote_addrs: ["{{ manager_ip }}:2377"]
   

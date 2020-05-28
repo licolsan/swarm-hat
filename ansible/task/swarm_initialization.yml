@@ -2,7 +2,7 @@
 - name: Init a new swarm with default parameters
   docker_swarm:
     state: present
-    advertise_addr: 192.168.3.10
+    advertise_addr: "{{ manager_ip }}"
 
 - name: Update swarm configuration
   docker_swarm:

@@ -3,6 +3,7 @@
   docker_swarm:
     state: present
     advertise_addr: "{{ manager_ip }}"
+  register: swarm
 
 - name: Update swarm configuration
   docker_swarm:

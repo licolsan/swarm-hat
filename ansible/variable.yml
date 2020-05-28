@@ -1,2 +1,6 @@
 user: vagrant
 manager_ip: 192.168.3.10
+
+app_repository: https://github.com/fuchain/librarian-module.git
+app_version: 2.0.2
+app_directory: /home/vagrant/space

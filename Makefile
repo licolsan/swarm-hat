@@ -18,3 +18,9 @@ test_ping_vm:
 
 setup_swarm:
 	cd ./ansible && ansible-playbook -i ./inventory.ini ./provision.yml
+
+deploy:
+	cd ./ansible && ansible-playbook -i ./inventory.ini ./deployment.yml
+
+destroy:
+	cd ./ansible && ansible-playbook -i ./inventory.ini ./destruction.yml

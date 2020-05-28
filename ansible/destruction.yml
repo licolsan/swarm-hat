@@ -1,0 +1,10 @@
+---
+  - name: Destroy fuchain services from swarm
+    hosts: swarm-manager
+    tasks:
+      - include_vars: variable.yml
+      - name: Destroy services
+        shell:
+          cmd: docker stack rm librarian
+          chdir: "{{ app_directory }}"
+  

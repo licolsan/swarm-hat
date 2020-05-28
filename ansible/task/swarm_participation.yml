@@ -3,6 +3,5 @@
   docker_swarm:
     state: join
     advertise_addr: "{{ manager_ip }}"
-    join_token: SWMTKN-1-4qyfv6zm0lc1uu5dald5bjoggo9bg3a0f36cj9douwmmg3sftg-5razfma8vabgj2qzc46vuirzl
+    join_token: "{{ hostvars['swarm-manager'].swarm.swarm_facts.JoinTokens.Worker }}"
     remote_addrs: ["{{ manager_ip }}:2377"]
-  

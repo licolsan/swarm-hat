@@ -1,6 +1,6 @@
-# 🎩 Swarm Hat
+# 🎩 SwarmHat
 
-Swarm Hat is an platform for fastly setting up **Docker Swarm** orchestration cluster on local computer, using virtual machine
+SwarmHat is an platform for fastly setting up **Docker Swarm** orchestration cluster on local computer, using virtual machine
 
 ## Prerequisites
 

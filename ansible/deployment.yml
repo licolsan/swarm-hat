@@ -1,6 +1,7 @@
 ---
 - name: Deploy fuchain services on swarm
   hosts: swarm-manager
+  gather_facts: no
   tasks:
     - include_vars: variable.yml
     - name: Clone repository

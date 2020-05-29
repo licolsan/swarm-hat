@@ -1,6 +1,7 @@
 ---
   - name: Destroy fuchain services from swarm
     hosts: swarm-manager
+    gather_facts: no
     tasks:
       - include_vars: variable.yml
       - name: Destroy services

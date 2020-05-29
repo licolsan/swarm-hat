@@ -8,12 +8,14 @@
 
 - name: Init swarm cluster
   hosts: swarm-manager
+  gather_facts: no
   tasks:
     - include_vars: variable.yml
     - import_tasks: ./task/swarm_initialization.yml
 
 - name: Join cluster
   hosts: swarm-workers
+  gather_facts: no
   tasks:
     - include_vars: variable.yml
     - import_tasks: ./task/swarm_participation.yml

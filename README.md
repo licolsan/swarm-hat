@@ -16,27 +16,32 @@ SwarmHat is an platform for fastly setting up **Docker Swarm** orchestration clu
 
 ## Deployment
 
-  1. Initialize virtual machines
+  1. Download box
+  ```
+    $ make download_box
+  ```
+
+  2. Initialize virtual machines
   ```
     $ make init_vm
   ```
 
-  2. Test all virtual machines is alive and config correctly
+  3. Test all virtual machines is alive and config correctly
   ```
     $ make test_ping_vm
   ```
 
-  3. Initialize swarm cluster
+  4. Initialize swarm cluster
   ```
     $ make setup_swarm
   ```
 
-  4. [Optional] This command will run a deployment template of [FUChain](https://github.com/fuchain/librarian-module)
+  5. [Optional] This command will run a deployment template of [FUChain](https://github.com/fuchain/librarian-module)
   ```
     $ make deploy
   ```
 
-  5. Finally, you can run to master node and enjoy with your cluster
+  6. Finally, you can run to master node and enjoy with your cluster
 
   ```
     $ vagrant ssh swarm-manager
